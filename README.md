@@ -15,7 +15,7 @@ THRESHOLD=80
 
 # Get Usage
 # 'disk1' should be replaced by the device you need to check
-# NOTE '$8' may need to change depending on what distro version you are using. I figured 'df' for MAC and Ubuntu doesn't return the same set of columns.
+# NOTE '$8' may need to change depending on what distro you are using. I figured 'df' for MAC and Ubuntu doesn't return the same set of columns.
 USAGE=`df | awk '$1 ~ /disk1/ {print $8}' | cut -d"%" -f1`
  
 echo "=== CHECKING USAGE ==="
@@ -47,3 +47,24 @@ fi
 
 # Note
 You may need to run `chmod +x check_disk_usage.sh` to work.
+
+# How did I get USAGE?
+This line gets the usage for us
+```
+USAGE=`df | awk '$1 ~ /disk1/ {print $8}' | cut -d"%" -f1
+```
+
+1. `df` - https://en.wikipedia.org/wiki/Df_(Unix)
+Returns:
+
+```
+Filesystem    512-blocks      Used Available Capacity  iused   ifree %iused  Mounted on
+/dev/disk1     487849984 438662272  48675712    91% 54896782 6084464   90%   /
+devfs                368       368         0   100%      638       0  100%   /dev
+map -hosts             0         0         0   100%        0       0  100%   /net
+map auto_home          0         0         0   100%        0       0  100%   /home
+```
+
+2. awk - disects the returned information from `df`. `$1 ~ /disk1/` checks the first column if it matches `disk1` then `{print $8}` prints column no. 8.
+
+3. `cut -d "%" -f1` simply removes the `%` at the end of the returned value.
