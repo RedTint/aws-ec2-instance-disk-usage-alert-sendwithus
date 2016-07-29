@@ -37,7 +37,7 @@ fi
 2. Will send an Email Alert via SendWithUs.
 
 # What do I need to define?
-1. You need to create a template in SendWithUs and get your template ID. (Ff you are already using SendWithUs, you should already know this.)
+1. You need to create a template in SendWithUs and get your template ID. (if you are already using SendWithUs, you should already know this.)
 
 2. You need to replace `your_sendwithus_api_key_here` with your actual API Key.
 
