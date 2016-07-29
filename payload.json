@@ -1,0 +1,27 @@
+{
+    "template": "tem_your_template_from_sendwithus",
+    "recipient": {
+        "name": "Admin",
+        "address": "support@domain.com"
+    },
+    "template_data": {},
+    "cc": [
+    { "address": "whoelse@domain.com" }
+    ],
+
+    "bcc": [],
+
+    "sender": {
+        "name": "Domain Server",
+        "address": "support@domain.com",
+        "reply_to": "support@domain.com"
+    },
+
+    "tags": [],
+
+    "headers": {
+        "X-HEADER-ONE": "header-value"
+    },
+
+    "locale": "en-US"
+}
