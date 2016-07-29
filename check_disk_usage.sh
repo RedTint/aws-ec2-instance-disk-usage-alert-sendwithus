@@ -12,7 +12,7 @@ echo "Usage = $USAGE%"
 if [ $USAGE -gt $THRESHOLD ]
 then
     # call SendWithUs API
-    # Replace 'your_sendwithus_app_key_here' with your SendWithUs API Key
+    # Replace 'your_sendwithus_api_key_here' with your SendWithUs API Key
     echo "Threshold reached. Sending Email..."
-    curl -i -u your_sendwithus_app_key_here: https://api.sendwithus.com/api/v1/send --header "Accept:application/json" -d @$(pwd)/payload.json
+    curl -i -u your_sendwithus_api_key_here: https://api.sendwithus.com/api/v1/send --header "Accept:application/json" -d @$(pwd)/payload.json
 fi
