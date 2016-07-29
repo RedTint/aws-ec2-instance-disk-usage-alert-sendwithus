@@ -5,6 +5,10 @@ Normally, I would not prefer using an Email Provider but AWS EC2 Instances won't
 
 So, if you already have an Email Provider which you can use, why not leverage that to create an Email Alert?
 
+# Why Recommend?
+
+"It's portable from AWS to Azure to Google Cloud to whereever" - Jim Rath
+
 # Other Options
 Setup AWS SES or SMTP. (Note: I have neither available)
 
