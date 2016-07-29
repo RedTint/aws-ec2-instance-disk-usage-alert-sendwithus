@@ -55,9 +55,10 @@ USAGE=`df | awk '$1 ~ /disk1/ {print $8}' | cut -d"%" -f1
 ```
 
 1. `df` - https://en.wikipedia.org/wiki/Df_(Unix)
-Returns:
+Returns ($1-$9 not included):
 
 ```
+$1            $2              $3   $4        $5        $6      $7    $8      $9
 Filesystem    512-blocks      Used Available Capacity  iused   ifree %iused  Mounted on
 /dev/disk1     487849984 438662272  48675712    91% 54896782 6084464   90%   /
 devfs                368       368         0   100%      638       0  100%   /dev
